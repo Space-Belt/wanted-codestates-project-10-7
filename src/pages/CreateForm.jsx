@@ -40,6 +40,14 @@ export default function CreateForm() {
     setFieldList((prevList) => {
       const newList = prevList.filter((field) => field.id !== index);
       return newList;
+  const onSubmitHandler = useCallback((fieldFormData) => {
+    // 저장하기 버튼 클릭시 각 필드의 input 값들 전부 저장하기
+    // setFieldList((prevList) => [...prevList, fieldFormData]);
+    // console.log(fieldFormData);
+    setFormState({
+      id: uuidv4(),
+      title: formTitleRef.current.value,
+      fieldList: [fieldFormData],
     });
   });
 
@@ -47,7 +55,7 @@ export default function CreateForm() {
     setFieldList((prevList) => {
       const newList = prevList.map((field) => {
         if (field.id === newField.id) {
-          return newField;
+          return newField; 
         }
         return field;
       });
