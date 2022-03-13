@@ -217,11 +217,9 @@ const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   input:focus {
     outline: none;
   }
-
   select {
     width: 25%;
     height: 36px;
@@ -232,7 +230,6 @@ const FormContainer = styled.div`
     font-weight: 600;
     line-height: 15px;
     padding: 0 10px;
-
     option {
       background-color: #fff;
     }
@@ -253,14 +250,12 @@ const FormContainer = styled.div`
     background-color: #ff4545;
     border-radius: 0 7px 0 0;
   }
-
   .placeholder-description {
     width: 100%;
     height: 36px;
     height: auto;
     padding: 0 10px;
     // border-top: 1px solid #f2f2f2;
-
     input {
       width: 100%;
       height: 36px;
@@ -292,7 +287,6 @@ const CheckBox = styled.div`
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
-
   #required {
     border: none;
     margin: 0 5px;
@@ -300,7 +294,6 @@ const CheckBox = styled.div`
 `;
 const EditorWrapper = styled.div`
   width: 100%;
-
   .wrapper-class {
     // height: 100%;
   }

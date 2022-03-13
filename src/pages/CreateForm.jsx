@@ -40,14 +40,6 @@ export default function CreateForm() {
     setFieldList((prevList) => {
       const newList = prevList.filter((field) => field.id !== index);
       return newList;
-  const onSubmitHandler = useCallback((fieldFormData) => {
-    // 저장하기 버튼 클릭시 각 필드의 input 값들 전부 저장하기
-    // setFieldList((prevList) => [...prevList, fieldFormData]);
-    // console.log(fieldFormData);
-    setFormState({
-      id: uuidv4(),
-      title: formTitleRef.current.value,
-      fieldList: [fieldFormData],
     });
   });
 
@@ -55,7 +47,7 @@ export default function CreateForm() {
     setFieldList((prevList) => {
       const newList = prevList.map((field) => {
         if (field.id === newField.id) {
-          return newField; 
+          return newField;
         }
         return field;
       });
@@ -126,13 +118,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   // align-items: center;
   margin: 0 auto;
-
   h1 {
     font-size: 24px;
     text-align: center;
     padding: 20px 0;
   }
-
   label {
     height: 16px;
     margin: 6px 0;
@@ -141,7 +131,6 @@ const Wrapper = styled.div`
     font-weight: 700;
     line-height: 16px;
   }
-
   #add-field-button {
     width: 100%;
     height: 35px;
@@ -159,7 +148,6 @@ const FormTitleWrapper = styled.section`
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-
   #formTitle {
     width: 100%;
     height: 40px;
@@ -167,7 +155,6 @@ const FormTitleWrapper = styled.section`
     padding: 0 10px;
     border: 1px solid #f2f2f2;
     border-radius: 7px;
-
     :focus {
       outline: none;
     }
