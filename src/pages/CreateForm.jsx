@@ -88,10 +88,12 @@ export default function CreateForm() {
       </FormTitleWrapper>
       <section style={{ display: 'flex', flexDirection: 'column' }}>
         <label>필드목록</label>
-        {fieldList.map((field) => {
+        {fieldList.map((field, index) => {
           return (
             <FormField
+              draggable
               key={field.id}
+              id={index}
               fieldState={field}
               fieldList={fieldList}
               // setFieldList={setFieldList}
